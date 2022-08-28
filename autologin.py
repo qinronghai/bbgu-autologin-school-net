@@ -26,7 +26,7 @@ person_data = {
     'login_method': '1',
     'user_account': ',0,1804421304@telecom',
     'user_password': '110979',
-    'wlan_user_ip': '10.208.28.74',
+    'wlan_user_ip': '10.208.28.166',
     'wlan_user_ipv6': '',
     'wlan_user_mac': '000000000000',
     'wlan_ac_ip': '10.0.9.33',
@@ -41,11 +41,10 @@ proxies = {"http": None, "https": None}
 
 # 发送post请求登录网页
 res = requests.get(url=url, headers=get_headers,
-                    params=person_data, proxies=proxies)
+                   params=person_data, proxies=proxies)
 # print(res.json())
 response = res.status_code
 if response == 200:
     print("连接成功 响应码为{}".format(response))
 else:
     print("连接失败 响应码为{}".format(response))
-
